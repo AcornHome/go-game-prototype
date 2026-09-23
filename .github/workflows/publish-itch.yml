@@ -18,7 +18,7 @@ permissions:
 jobs:
   push:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 90
     steps:
       - name: Resolve release tag
         id: meta
@@ -82,4 +82,15 @@ jobs:
             ls -la dist | head -50
             exit 1
           fi
-          ./butler push ./dist "${{ secrets.ITCH_USER }}/chinago:windows-stable" --user "${{ secrets.ITCH_USER }}"
+          # butler can drop the connection mid-upload on big files; retry with resume
+          for attempt in 1 2 3; do
+            echo "::group::butler push attempt $attempt"
+            if ./butler push ./dist "${{ secrets.ITCH_USER }}/chinago:windows-stable" --user "${{ secrets.ITCH_USER }}"; then
+              echo "butler push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "attempt $attempt failed, retrying in 15s..."
+            sleep 15
+          done
+          echo "::error::butler push failed after 3 attempts"
+          exit 1
