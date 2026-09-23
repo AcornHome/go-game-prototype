@@ -1,0 +1,13 @@
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\MainWindow.xaml(508,48): error MC3044: 关闭 MarkupExtension 表达式的“}”之后，文本“ ”是不允许的。 行 508 位置 48. [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\PuzzleWindow.xaml(4,22): error MC3000: “An error occurred while parsing EntityName. Line 4, position 22.”XML 无效。 [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\MailConfigDialog.xaml(122,56): error MC3000: “An error occurred while parsing EntityName. Line 122, position 56.”XML 无效。 [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+
+生成失败。
+
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\MainWindow.xaml(508,48): error MC3044: 关闭 MarkupExtension 表达式的“}”之后，文本“ ”是不允许的。 行 508 位置 48. [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\PuzzleWindow.xaml(4,22): error MC3000: “An error occurred while parsing EntityName. Line 4, position 22.”XML 无效。 [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\MailConfigDialog.xaml(122,56): error MC3000: “An error occurred while parsing EntityName. Line 122, position 56.”XML 无效。 [C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\desktop\GoGame.csproj]
+    0 个警告
+    3 个错误
+
+已用时间 00:00:00.47

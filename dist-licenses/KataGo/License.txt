@@ -1,0 +1,36 @@
+MIT License
+-----------
+
+Copyright 2025 David J Wu ("lightvector") and/or other authors of the content in the
+KataGo repository (https://github.com/lightvector/KataGo). See the 'CONTRIBUTORS' file
+in that repository for a list of authors as well as other indirect contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+Additional disclaimer from David J Wu ("lightvector"):
+I am providing code in the repository to you under an open source license. Because this is
+my personal repository, the license you receive to my code is from me, and not from any of
+my employers, present or past (including Facebook, during part of 2020-2023).
+
+Notes for redistribution
+------------------------
+This KataGo engine binary (katago.exe and its accompanying DLLs) is bundled with 中国围棋
+("ChinaGo") as an unmodified redistribution. The complete KataGo source code is available at:
+https://github.com/lightvector/KataGo
+
+If you modify KataGo itself and redistribute the modified version, the MIT license requires
+that you retain this copyright notice and license text in your distribution.

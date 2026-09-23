@@ -1,0 +1,53 @@
+name: Publish to itch.io
+
+# Triggers:
+#   1) Publishing a GitHub Release that contains ChinaGo-*-win.zip  -> auto uploads
+#   2) Manual "Run workflow" with the release tag                    -> uploads on demand
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag that holds the windows zip (e.g. v1.5.3)'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve release tag
+        id: meta
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download windows zip from the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: gh release download "${{ steps.meta.outputs.tag }}" --pattern "ChinaGo-*-win.zip" --dir ./download
+
+      - name: Install butler (Linux build, runs on the overseas runner)
+        shell: bash
+        run: |
+          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler.zip
+          chmod +x butler
+          ./butler -V
+
+      - name: Extract and push to itch.io
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        shell: bash
+        run: |
+          mkdir -p dist
+          unzip -o ./download/ChinaGo-*-win.zip -d dist
+          ./butler push ./dist "${{ secrets.ITCH_USER }}/chinago:windows-stable" --user "${{ secrets.ITCH_USER }}"

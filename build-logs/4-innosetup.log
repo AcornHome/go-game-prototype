@@ -1,0 +1,110 @@
+Inno Setup 6 Command-Line Compiler
+Copyright (C) 1997-2026 Jordan Russell. All rights reserved.
+Portions Copyright (C) 2000-2026 Martijn Laan. All rights reserved.
+Portions Copyright (C) 2001-2004 Alex Yackimoff. All rights reserved.
+https://www.innosetup.com
+
+Compiler engine version: Inno Setup 6.7.3
+Non-commercial use only
+
+Preprocessing
+   Reading file: C:\Program Files (x86)\Inno Setup 6\ISPPBuiltins.iss
+Parsing [Setup] section, line 29
+Parsing [Setup] section, line 30
+Parsing [Setup] section, line 31
+Parsing [Setup] section, line 32
+Parsing [Setup] section, line 33
+Parsing [Setup] section, line 34
+Parsing [Setup] section, line 35
+Parsing [Setup] section, line 36
+Parsing [Setup] section, line 37
+Parsing [Setup] section, line 38
+Parsing [Setup] section, line 39
+Parsing [Setup] section, line 40
+Parsing [Setup] section, line 41
+Parsing [Setup] section, line 42
+Parsing [Setup] section, line 43
+Parsing [Setup] section, line 44
+Parsing [Setup] section, line 45
+Parsing [Setup] section, line 46
+Parsing [Setup] section, line 47
+Parsing [Setup] section, line 48
+Parsing [Setup] section, line 49
+Parsing [Setup] section, line 50
+Parsing [Setup] section, line 51
+Parsing [Setup] section, line 52
+Parsing [Setup] section, line 53
+Parsing [Setup] section, line 54
+Reading file (LicenseFile)
+Reading file (InfoBeforeFile)
+Reading file (WizardImageFile)
+Reading file (WizardSmallImageFile)
+Preparing Setup program executable
+   Verification successful
+   Updating icons (Setup.e32)
+   Updating version info (Setup.e32)
+Determining language code pages
+Parsing [Languages] section, line 57
+   Reading file: C:\Program Files (x86)\Inno Setup 6\Languages\ChineseSimplified.isl
+   Messages in script file
+Reading default messages from Default.isl
+Parsing [Languages] section, line 57
+   Reading file: C:\Program Files (x86)\Inno Setup 6\Languages\ChineseSimplified.isl
+Parsing [LangOptions], [Messages], and [CustomMessages] sections
+   Messages in script file
+Reading [Code] section
+Parsing [Tasks] section, line 60
+Parsing [Icons] section, line 82
+Parsing [Icons] section, line 83
+Parsing [Icons] section, line 84
+Parsing [UninstallDelete] section, line 94
+Parsing [Run] section, line 88
+Parsing [Files] section, line 64
+Parsing [Files] section, line 65
+Parsing [Files] section, line 66
+Parsing [Files] section, line 67
+Parsing [Files] section, line 70
+Parsing [Files] section, line 73
+Parsing [Files] section, line 77
+Compiling [Code] section
+Creating setup files
+   Verification successful
+   Updating icons (Setup.exe)
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\GoGame.exe
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\GoGame.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\GoGame.deps.json
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\GoGame.runtimeconfig.json
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\installer\app.ico
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\THIRD-PARTY-NOTICES.txt
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\analysis_example.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\bz2.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\cacert.pem
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\contribute_example.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\default_gtp.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\gtp_human5k_example.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\gtp_human9d_search_example.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\katago.exe
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\libcrypto-3-x64.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\libssl-3-x64.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\License.txt
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\match_example.cfg
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\msvcp140.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\msvcp140_1.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\msvcp140_2.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\msvcp140_atomic_wait.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\msvcp140_codecvt_ids.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\README.txt
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\vcruntime140.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\vcruntime140_1.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\vcruntime140_threads.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\z.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\zip.dll
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\weights\kata1-b18c384nbt.bin.gz
+   Compressing: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo\weights\License.txt
+   Compressing Setup program executable
+   Updating version info (Setup.exe)
+   Updating manifest (Setup.exe)
+
+
+Successful compile (10.812 sec). Resulting Setup program filename is:
+C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\installer\ChinaGoSetup-1.5.2.exe

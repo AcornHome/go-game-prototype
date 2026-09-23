@@ -1,0 +1,171 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+  <!-- ===== Top bar / window ===== -->
+  <sys:String x:Key="AppTitle">China Go</sys:String>
+  <sys:String x:Key="TopFeedback">📨 Feedback</sys:String>
+  <sys:String x:Key="TopAbout">ℹ️ About</sys:String>
+  <sys:String x:Key="LangToggle">🌐 Language</sys:String>
+  <sys:String x:Key="TopFeedbackTip">Submit a bug report</sys:String>
+  <sys:String x:Key="TopAboutTip">Copyright &amp; open-source credits</sys:String>
+  <sys:String x:Key="LangToggleTip">Switch language</sys:String>
+  <sys:String x:Key="StatusEngine">Engine:</sys:String>
+  <sys:String x:Key="StatusMovePre">Move </sys:String>
+  <sys:String x:Key="StatusMovePost"></sys:String>
+  <sys:String x:Key="StatusColor">Play:</sys:String>
+
+  <!-- ===== Stone colors ===== -->
+  <sys:String x:Key="ColorBlack">Black</sys:String>
+  <sys:String x:Key="ColorWhite">White</sys:String>
+  <sys:String x:Key="ColorBlackFirst">Black (first)</sys:String>
+  <sys:String x:Key="ColorWhiteSecond">White (second)</sys:String>
+
+  <!-- ===== Engine status ===== -->
+  <sys:String x:Key="EngineStarting">Engine: starting</sys:String>
+  <sys:String x:Key="EngineReady">Engine: ready</sys:String>
+  <sys:String x:Key="EngineThinking">Engine: thinking</sys:String>
+  <sys:String x:Key="EngineIdle">Engine: idle</sys:String>
+  <sys:String x:Key="EngineFailed">Engine: failed</sys:String>
+  <sys:String x:Key="EngineError">Engine: error</sys:String>
+  <sys:String x:Key="EngineLoading">Engine: loading</sys:String>
+
+  <!-- ===== Game setup panel ===== -->
+  <sys:String x:Key="SettingsTitle">⚙ Game Setup</sys:String>
+  <sys:String x:Key="LabelDifficulty">AI Difficulty</sys:String>
+  <sys:String x:Key="LevelBeginner">Beginner · 1s/move</sys:String>
+  <sys:String x:Key="LevelEasy">Easy · 3s/move (recommended)</sys:String>
+  <sys:String x:Key="LevelMedium">Intermediate · 10s/move</sys:String>
+  <sys:String x:Key="LevelHard">Advanced · 30s/move</sys:String>
+  <sys:String x:Key="LabelBoardSize">Board Size</sys:String>
+  <sys:String x:Key="Size9">9×9 (blitz)</sys:String>
+  <sys:String x:Key="Size13">13×13</sys:String>
+  <sys:String x:Key="Size19">19×19 (standard)</sys:String>
+  <sys:String x:Key="LabelYourColor">Your Color</sys:String>
+  <sys:String x:Key="ColorBlackOpt">Black (first)</sys:String>
+  <sys:String x:Key="ColorWhiteOpt">White (second)</sys:String>
+  <sys:String x:Key="SizeHint">⚠ Board/color changes take effect on the next game</sys:String>
+
+  <!-- ===== Game actions panel ===== -->
+  <sys:String x:Key="OpsTitle">▶ Game Actions</sys:String>
+  <sys:String x:Key="NewGame">🎯 New Game</sys:String>
+  <sys:String x:Key="Hint">💡 Hint (AI advice)</sys:String>
+  <sys:String x:Key="HintTip">Not sure where to play? KataGo suggests the best point (marked #1 on the board)</sys:String>
+  <sys:String x:Key="Undo">↶ Undo (2 moves)</sys:String>
+  <sys:String x:Key="Pass">⏭ Pass</sys:String>
+  <sys:String x:Key="Score">📊 Score</sys:String>
+  <sys:String x:Key="Save">💾 Save SGF</sys:String>
+  <sys:String x:Key="Resign">🏳 Resign</sys:String>
+
+  <!-- ===== Timer bar ===== -->
+  <sys:String x:Key="YourTime">⏳ Your time</sys:String>
+  <sys:String x:Key="AiThinking">🤖 AI thinking</sys:String>
+  <sys:String x:Key="Standby">Standby</sys:String>
+
+  <!-- ===== Bottom status bar ===== -->
+  <sys:String x:Key="BlackLabel">Black</sys:String>
+  <sys:String x:Key="WhiteLabel">White</sys:String>
+  <sys:String x:Key="StonesLabel">Stones</sys:String>
+  <sys:String x:Key="LastLabel">Last</sys:String>
+  <sys:String x:Key="MovePre">Move </sys:String>
+  <sys:String x:Key="MovePost"></sys:String>
+  <sys:String x:Key="TurnLabel">Turn: </sys:String>
+  <sys:String x:Key="BlackShort">Black</sys:String>
+  <sys:String x:Key="WhiteShort">White</sys:String>
+
+  <!-- ===== Idle status ===== -->
+  <sys:String x:Key="IdleStatus">Idle · click "New Game" to start</sys:String>
+  <sys:String x:Key="IdleHint">Adjust board size / difficulty / color on the right, then start a new game</sys:String>
+
+  <!-- ===== Endgame overlay ===== -->
+  <sys:String x:Key="EndgameTitle">Game Over</sys:String>
+  <sys:String x:Key="EndgameBlackYou">Black (you)</sys:String>
+  <sys:String x:Key="EndgameWhiteYou">White (you)</sys:String>
+  <sys:String x:Key="EndgameBlackAi">Black (KataGo)</sys:String>
+  <sys:String x:Key="EndgameWhiteAi">White (KataGo)</sys:String>
+  <sys:String x:Key="EndgameDraw">Draw</sys:String>
+  <sys:String x:Key="EndgameDetailBlackYou">Black (you)</sys:String>
+  <sys:String x:Key="EndgameDetailWhiteAi">White (AI)</sys:String>
+  <sys:String x:Key="EndgameStones">Stones</sys:String>
+  <sys:String x:Key="EndgameTerritory">Territory</sys:String>
+  <sys:String x:Key="EndgameNewGame">🎯 Play Again</sys:String>
+  <sys:String x:Key="EndgameReview">📊 AI Review</sys:String>
+  <sys:String x:Key="EndgameClose">✕ Close Panel</sys:String>
+  <sys:String x:Key="EndgameYouWin">win</sys:String>
+  <sys:String x:Key="EndgameAiWin">win</sys:String>
+  <sys:String x:Key="KomiNoteNeutral">Based on KataGo final_score; {0} neutral points are unassigned, so the estimate may differ from the official score.</sys:String>
+  <sys:String x:Key="KomiNoteDecided">KataGo final_score is authoritative; Black gives White 7.5 komi (standard Chinese-rule komi).</sys:String>
+
+  <!-- ===== AI Review window ===== -->
+  <sys:String x:Key="ReviewTitle">📊 AI Review</sys:String>
+  <sys:String x:Key="ReviewSummary">Result: {0} · {1} KataGo move evaluations · game finished in {2} moves.</sys:String>
+  <sys:String x:Key="ReviewKeyPoints">🔍 Key turning points</sys:String>
+  <sys:String x:Key="ReviewWinrate">📈 Player win rate after each KataGo move</sys:String>
+  <sys:String x:Key="ReviewMoves">📋 Move-by-move details (evaluations only for KataGo moves)</sys:String>
+  <sys:String x:Key="ReviewColIndex">#</sys:String>
+  <sys:String x:Key="ReviewColSide">Color</sys:String>
+  <sys:String x:Key="ReviewColVertex">Move</sys:String>
+  <sys:String x:Key="ReviewColWinrate">Win %</sys:String>
+  <sys:String x:Key="ReviewColLead">Lead</sys:String>
+  <sys:String x:Key="ReviewColDelta">Δ</sys:String>
+  <sys:String x:Key="ReviewColVerdict">Verdict</sys:String>
+  <sys:String x:Key="ReviewClose">Close</sys:String>
+  <sys:String x:Key="ReviewVerdictOpening">Opening eval</sys:String>
+  <sys:String x:Key="ReviewVerdictPass">Pass (no change)</sys:String>
+  <sys:String x:Key="ReviewVerdictResign">Resign</sys:String>
+  <sys:String x:Key="ReviewVerdictBrilliant">✨ Brilliant</sys:String>
+  <sys:String x:Key="ReviewVerdictGood">Good move</sys:String>
+  <sys:String x:Key="ReviewVerdictBigMistake">⚠️ Big mistake</sys:String>
+  <sys:String x:Key="ReviewVerdictMistake">Mistake</sys:String>
+  <sys:String x:Key="ReviewVerdictNormal">Normal</sys:String>
+  <sys:String x:Key="ReviewPlayerMoveNoEval">No evaluation after player's move</sys:String>
+  <sys:String x:Key="ReviewNoTurningPoint">Win rate was fairly stable; no significant turning point.</sys:String>
+  <sys:String x:Key="ReviewMaxImprove">📈 Biggest gain: move {0} by {1} at {2}, win rate {3}% ({4}%)</sys:String>
+  <sys:String x:Key="ReviewMaxDrop">📉 Biggest drop: move {0} by {1} at {2}, win rate {3}% ({4}%)</sys:String>
+  <sys:String x:Key="ReviewXAxis">AI move # (1 ~ {0})</sys:String>
+  <sys:String x:Key="ReviewYou">You</sys:String>
+  <sys:String x:Key="ReviewAi">AI</sys:String>
+  <sys:String x:Key="ReviewUnrecorded">(not recorded)</sys:String>
+
+  <!-- ===== Feedback window ===== -->
+  <sys:String x:Key="FbTitle">Feedback · China Go</sys:String>
+  <sys:String x:Key="FbBannerTitle">Feedback</sys:String>
+  <sys:String x:Key="FbBannerSub"> · China Go</sys:String>
+  <sys:String x:Key="FbBannerDesc">Found a problem? We read every report to make the app better.</sys:String>
+  <sys:String x:Key="FbCatTitle">Category</sys:String>
+  <sys:String x:Key="FbCatKataGo">KataGo error</sys:String>
+  <sys:String x:Key="FbCatKataGoTip">No response / crash / very slow</sys:String>
+  <sys:String x:Key="FbCatUi">UI lag</sys:String>
+  <sys:String x:Key="FbCatUiTip">Flicker / mouse dead / button no response</sys:String>
+  <sys:String x:Key="FbCatReview">Review / SGF</sys:String>
+  <sys:String x:Key="FbCatReviewTip">SGF loading / report generation / move log</sys:String>
+  <sys:String x:Key="FbCatLearn">Learning features</sys:String>
+  <sys:String x:Key="FbCatLearnTip">Life &amp; death / online / tutorials</sys:String>
+  <sys:String x:Key="FbCatInstall">Install &amp; launch</sys:String>
+  <sys:String x:Key="FbCatInstallTip">Installer / .NET / uninstall</sys:String>
+  <sys:String x:Key="FbCatOther">Other / suggestion</sys:String>
+  <sys:String x:Key="FbCatOtherTip">Feature idea / misc</sys:String>
+  <sys:String x:Key="FbTitleLabel">One-line title</sys:String>
+  <sys:String x:Key="FbTitlePlaceholder">e.g. Life-and-death mode: KataGo keeps timing out</sys:String>
+  <sys:String x:Key="FbDetailLabel">Description</sys:String>
+  <sys:String x:Key="FbDetailPlaceholder">How to reproduce? Steps? Expected vs actual?</sys:String>
+  <sys:String x:Key="FbEmailLabel">Email</sys:String>
+  <sys:String x:Key="FbSteamLabel">Steam name</sys:String>
+  <sys:String x:Key="FbOptional">(optional)</sys:String>
+  <sys:String x:Key="FbHint">Submitted via SMTP to the developer's mailbox</sys:String>
+  <sys:String x:Key="FbCancel">Cancel</sys:String>
+  <sys:String x:Key="FbSubmit">📤 Submit Feedback</sys:String>
+
+  <!-- ===== Styled dialog default buttons ===== -->
+  <sys:String x:Key="DlgClose">Close</sys:String>
+  <sys:String x:Key="DlgOk">OK</sys:String>
+  <sys:String x:Key="DlgCancel">Cancel</sys:String>
+  <sys:String x:Key="DlgConfirm">Confirm</sys:String>
+
+  <!-- ===== Crash dialog (App.xaml.cs) ===== -->
+  <sys:String x:Key="CrashTitle">Unexpected error</sys:String>
+  <sys:String x:Key="CrashMsg">The app caught an error and saved details to your desktop (go-crash-*.txt). You can keep playing, or restart after screenshotting the file.</sys:String>
+
+  <sys:String x:Key="ReviewMoveTip">AI move {0}: {1}&#10;Player win rate {2}%&#10;Score lead {3}</sys:String>
+
+</ResourceDictionary>

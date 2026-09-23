@@ -1,0 +1,27 @@
+============================================================
+中国围棋 一键部署
+============================================================
+[1] 已同步 6 个文件 -> C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist
+      GoGame.deps.json                       412 bytes
+      GoGame.dll                         258,048 bytes
+      GoGame.exe                         162,304 bytes
+      GoGame.pdb                          62,872 bytes
+      GoGame.runtimeconfig.json              519 bytes
+      THIRD-PARTY-NOTICES.txt              2,351 bytes
+
+[1b] KataGo 引擎目录已就绪 -> C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist\KataGo
+      更新 0 个文件，跳过 18 个（未变化）
+      目录总大小 107.9 MB
+
+[1c] 合规材料已同步 3 个文件
+      THIRD-PARTY-NOTICES.txt -> C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist
+      KataGo/License.txt      -> C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist/KataGo/
+      KataGo/weights/License.txt -> C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\dist/KataGo/weights/
+
+[2] 桌面快捷方式已重建
+      C:\Users\Administrator\Desktop\中国围棋.lnk
+      大小 1530 bytes, HeaderSize=0x4C, LinkFlags=0x000000DF
+      图标: C:\Users\Administrator\WorkBuddy\2026-09-04-12-30-09\go-game-prototype\installer\app.ico
+      自检: 通过 [OK]
+
+完成。双击桌面「中国围棋」即可启动。

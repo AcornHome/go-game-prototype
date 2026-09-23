@@ -1,0 +1,50 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Visual Studio / VSCode
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+*.unityproj
+*.tmp
+*.userprefs
+
+# IDE
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# KataGo
+*.nnue
+*.bin.gz.cache
+katago-cache/
+
+# 本地配置 & 产物
+*.local
+env.local
+unity-project/      # Unity 工程目录（用户本地创建）
+
+# 编译产物
+[Bb]in/
+*.dll
+*.exe
+*.pdb
+
+# ChinaGo 发布产物（走 GitHub Release 上传，不进仓库）
+dist/
+ChinaGo-*-win.zip

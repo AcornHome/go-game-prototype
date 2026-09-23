@@ -1,0 +1,55 @@
+THIRD-PARTY NOTICES
+===================
+
+中国围棋 (this software, "ChinaGo") bundles the following third-party components.
+All licenses below are permissive (MIT / BSD / zlib / OpenSSL), allowing commercial
+redistribution.
+
+================================================================================
+1. KataGo engine (katago.exe + 13 DLLs)
+   Source:    https://github.com/lightvector/KataGo
+   License:   MIT
+   Author:    David J Wu ("lightvector")
+   Purpose:   Go (围棋) AI engine used by 中国围棋 for AI moves and analysis.
+   Files:     KataGo/katago.exe, KataGo/*.dll
+   See:       KataGo/License.txt (full MIT text)
+
+================================================================================
+2. KataGo neural network weights
+   Source:    https://katagotraining.org
+   File:      KataGo/weights/kata1-b18c384nbt.bin.gz
+   License:   MIT (KataGo Neural Network License)
+   Author:    David J Wu ("lightvector")
+   Purpose:   18-block, 384-channel neural net used by KataGo to evaluate Go positions.
+   See:       KataGo/weights/License.txt (full MIT text)
+
+================================================================================
+3. OpenBLAS (one of the bundled DLLs)
+   Source:    https://github.com/OpenMathLib/OpenBLAS
+   License:   BSD 3-Clause
+   Purpose:   Optimized BLAS library used by KataGo for matrix operations.
+
+================================================================================
+4. zlib (one of the bundled DLLs)
+   Source:    https://zlib.net
+   License:   zlib License
+   Purpose:   Data compression library used by KataGo.
+
+================================================================================
+5. OpenSSL libcrypto + libssl (two of the bundled DLLs)
+   Source:    https://www.openssl.org
+   License:   OpenSSL License (Apache License 1.0 / BSD-style)
+   Purpose:   Cryptographic primitives used by KataGo.
+
+================================================================================
+6. .NET / WPF runtime
+   Source:    https://dotnet.microsoft.com
+   License:   MIT
+   Purpose:   Application framework for 中国围棋's user interface.
+
+================================================================================
+
+DISCLAIMER
+----------
+This software is provided "AS IS" without warranty of any kind. See each component's
+license file for the full disclaimer text.

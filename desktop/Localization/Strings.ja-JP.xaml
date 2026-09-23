@@ -1,0 +1,171 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+  <!-- ===== Top bar / window ===== -->
+  <sys:String x:Key="AppTitle">China Go</sys:String>
+  <sys:String x:Key="TopFeedback">📨 フィードバック</sys:String>
+  <sys:String x:Key="TopAbout">ℹ️ について</sys:String>
+  <sys:String x:Key="LangToggle">🌐 言語</sys:String>
+  <sys:String x:Key="TopFeedbackTip">バグ報告を送信</sys:String>
+  <sys:String x:Key="TopAboutTip">著作権 &amp; オープンソースクレジット</sys:String>
+  <sys:String x:Key="LangToggleTip">言語を切り替え</sys:String>
+  <sys:String x:Key="StatusEngine">エンジン:</sys:String>
+  <sys:String x:Key="StatusMovePre">手数 </sys:String>
+  <sys:String x:Key="StatusMovePost"></sys:String>
+  <sys:String x:Key="StatusColor">プレイ:</sys:String>
+
+  <!-- ===== Stone colors ===== -->
+  <sys:String x:Key="ColorBlack">黒</sys:String>
+  <sys:String x:Key="ColorWhite">白</sys:String>
+  <sys:String x:Key="ColorBlackFirst">黒（先手）</sys:String>
+  <sys:String x:Key="ColorWhiteSecond">白（後手）</sys:String>
+
+  <!-- ===== Engine status ===== -->
+  <sys:String x:Key="EngineStarting">エンジン: 起動中</sys:String>
+  <sys:String x:Key="EngineReady">エンジン: 準備完了</sys:String>
+  <sys:String x:Key="EngineThinking">エンジン: 思考中</sys:String>
+  <sys:String x:Key="EngineIdle">エンジン: 待機中</sys:String>
+  <sys:String x:Key="EngineFailed">エンジン: 失敗</sys:String>
+  <sys:String x:Key="EngineError">エンジン: エラー</sys:String>
+  <sys:String x:Key="EngineLoading">エンジン: 読み込み中</sys:String>
+
+  <!-- ===== Game setup panel ===== -->
+  <sys:String x:Key="SettingsTitle">⚙ ゲーム設定</sys:String>
+  <sys:String x:Key="LabelDifficulty">AIの難易度</sys:String>
+  <sys:String x:Key="LevelBeginner">初心者 · 1秒/手</sys:String>
+  <sys:String x:Key="LevelEasy">簡単 · 3秒/手（推奨）</sys:String>
+  <sys:String x:Key="LevelMedium">中級 · 10秒/手</sys:String>
+  <sys:String x:Key="LevelHard">上級 · 30秒/手</sys:String>
+  <sys:String x:Key="LabelBoardSize">盤面のサイズ</sys:String>
+  <sys:String x:Key="Size9">9×9（ブリッツ）</sys:String>
+  <sys:String x:Key="Size13">13×13</sys:String>
+  <sys:String x:Key="Size19">19×19（標準）</sys:String>
+  <sys:String x:Key="LabelYourColor">あなたの石の色</sys:String>
+  <sys:String x:Key="ColorBlackOpt">黒（先手）</sys:String>
+  <sys:String x:Key="ColorWhiteOpt">白（後手）</sys:String>
+  <sys:String x:Key="SizeHint">⚠ 盤面/色の変更は次の対局から反映されます</sys:String>
+
+  <!-- ===== Game actions panel ===== -->
+  <sys:String x:Key="OpsTitle">▶ ゲーム操作</sys:String>
+  <sys:String x:Key="NewGame">🎯 新しい対局</sys:String>
+  <sys:String x:Key="Hint">💡 ヒント（AIの助言）</sys:String>
+  <sys:String x:Key="HintTip">どこに打つか迷ったら？KataGoが最善の点を提案します（盤上で#1と表示）</sys:String>
+  <sys:String x:Key="Undo">↶ 元に戻す（2手）</sys:String>
+  <sys:String x:Key="Pass">⏭ パス</sys:String>
+  <sys:String x:Key="Score">📊 結果</sys:String>
+  <sys:String x:Key="Save">💾 SGFを保存</sys:String>
+  <sys:String x:Key="Resign">🏳 投了</sys:String>
+
+  <!-- ===== Timer bar ===== -->
+  <sys:String x:Key="YourTime">⏳ あなたの持ち時間</sys:String>
+  <sys:String x:Key="AiThinking">🤖 AI思考中</sys:String>
+  <sys:String x:Key="Standby">待機中</sys:String>
+
+  <!-- ===== Bottom status bar ===== -->
+  <sys:String x:Key="BlackLabel">黒</sys:String>
+  <sys:String x:Key="WhiteLabel">白</sys:String>
+  <sys:String x:Key="StonesLabel">石数</sys:String>
+  <sys:String x:Key="LastLabel">最後</sys:String>
+  <sys:String x:Key="MovePre">手数 </sys:String>
+  <sys:String x:Key="MovePost"></sys:String>
+  <sys:String x:Key="TurnLabel">手番: </sys:String>
+  <sys:String x:Key="BlackShort">黒</sys:String>
+  <sys:String x:Key="WhiteShort">白</sys:String>
+
+  <!-- ===== Idle status ===== -->
+  <sys:String x:Key="IdleStatus">待機中 · 「新しい対局」をクリックして開始</sys:String>
+  <sys:String x:Key="IdleHint">右側で盤面サイズ / 難易度 / 色を調整してから、新しい対局を開始してください</sys:String>
+
+  <!-- ===== Endgame overlay ===== -->
+  <sys:String x:Key="EndgameTitle">対局終了</sys:String>
+  <sys:String x:Key="EndgameBlackYou">黒（あなた）</sys:String>
+  <sys:String x:Key="EndgameWhiteYou">白（あなた）</sys:String>
+  <sys:String x:Key="EndgameBlackAi">黒（KataGo）</sys:String>
+  <sys:String x:Key="EndgameWhiteAi">白（KataGo）</sys:String>
+  <sys:String x:Key="EndgameDraw">引き分け</sys:String>
+  <sys:String x:Key="EndgameDetailBlackYou">黒（あなた）</sys:String>
+  <sys:String x:Key="EndgameDetailWhiteAi">白（AI）</sys:String>
+  <sys:String x:Key="EndgameStones">石数</sys:String>
+  <sys:String x:Key="EndgameTerritory">地</sys:String>
+  <sys:String x:Key="EndgameNewGame">🎯 もう一度</sys:String>
+  <sys:String x:Key="EndgameReview">📊 AI解析</sys:String>
+  <sys:String x:Key="EndgameClose">✕ パネルを閉じる</sys:String>
+  <sys:String x:Key="EndgameYouWin">勝ち</sys:String>
+  <sys:String x:Key="EndgameAiWin">勝ち</sys:String>
+  <sys:String x:Key="KomiNoteNeutral">KataGoのfinal_scoreに基づく；{0} の中立点は未割り当てのため、公式の結果と異なる場合があります。</sys:String>
+  <sys:String x:Key="KomiNoteDecided">KataGoのfinal_scoreが正式なものです；黒は白に7.5コミ（中国ルール標準のコミ）を渡します。</sys:String>
+
+  <!-- ===== AI Review window ===== -->
+  <sys:String x:Key="ReviewTitle">📊 AI解析</sys:String>
+  <sys:String x:Key="ReviewSummary">結果: {0} · KataGoの手評価 {1} 件 · 対局は {2} 手で終了。</sys:String>
+  <sys:String x:Key="ReviewKeyPoints">🔍 重要な転換点</sys:String>
+  <sys:String x:Key="ReviewWinrate">📈 各KataGo着手後の勝率</sys:String>
+  <sys:String x:Key="ReviewMoves">📋 一手ずつの詳細（KataGoの手のみ評価）</sys:String>
+  <sys:String x:Key="ReviewColIndex">#</sys:String>
+  <sys:String x:Key="ReviewColSide">色</sys:String>
+  <sys:String x:Key="ReviewColVertex">着手</sys:String>
+  <sys:String x:Key="ReviewColWinrate">勝率%</sys:String>
+  <sys:String x:Key="ReviewColLead">リード</sys:String>
+  <sys:String x:Key="ReviewColDelta">Δ</sys:String>
+  <sys:String x:Key="ReviewColVerdict">判定</sys:String>
+  <sys:String x:Key="ReviewClose">閉じる</sys:String>
+  <sys:String x:Key="ReviewVerdictOpening">序盤評価</sys:String>
+  <sys:String x:Key="ReviewVerdictPass">パス（変化なし）</sys:String>
+  <sys:String x:Key="ReviewVerdictResign">投了</sys:String>
+  <sys:String x:Key="ReviewVerdictBrilliant">✨ 華妙</sys:String>
+  <sys:String x:Key="ReviewVerdictGood">良い手</sys:String>
+  <sys:String x:Key="ReviewVerdictBigMistake">⚠️ 大悪手</sys:String>
+  <sys:String x:Key="ReviewVerdictMistake">悪手</sys:String>
+  <sys:String x:Key="ReviewVerdictNormal">普通</sys:String>
+  <sys:String x:Key="ReviewPlayerMoveNoEval">プレイヤーの着手後の評価なし</sys:String>
+  <sys:String x:Key="ReviewNoTurningPoint">勝率はおおむね安定しており、大きな転換点はありませんでした。</sys:String>
+  <sys:String x:Key="ReviewMaxImprove">📈 最大の伸び: {0}手目（{1}）、{2}での勝率 {3}%（{4}%）</sys:String>
+  <sys:String x:Key="ReviewMaxDrop">📉 最大の低下: {0}手目（{1}）、{2}での勝率 {3}%（{4}%）</sys:String>
+  <sys:String x:Key="ReviewXAxis">AIの手数 # (1 ~ {0})</sys:String>
+  <sys:String x:Key="ReviewYou">あなた</sys:String>
+  <sys:String x:Key="ReviewAi">AI</sys:String>
+  <sys:String x:Key="ReviewUnrecorded">（未記録）</sys:String>
+
+  <!-- ===== Feedback window ===== -->
+  <sys:String x:Key="FbTitle">フィードバック · China Go</sys:String>
+  <sys:String x:Key="FbBannerTitle">フィードバック</sys:String>
+  <sys:String x:Key="FbBannerSub"> · China Go</sys:String>
+  <sys:String x:Key="FbBannerDesc">問題を見つけましたか？ 私たちはすべての報告を読み、アプリを改善しています。</sys:String>
+  <sys:String x:Key="FbCatTitle">カテゴリー</sys:String>
+  <sys:String x:Key="FbCatKataGo">KataGoエラー</sys:String>
+  <sys:String x:Key="FbCatKataGoTip">応答なし / クラッシュ / 非常に遅い</sys:String>
+  <sys:String x:Key="FbCatUi">UIの遅延</sys:String>
+  <sys:String x:Key="FbCatUiTip">ちらつき / マウス無反応 / ボタン無反応</sys:String>
+  <sys:String x:Key="FbCatReview">解析 / SGF</sys:String>
+  <sys:String x:Key="FbCatReviewTip">SGF読み込み / レポート生成 / 着手ログ</sys:String>
+  <sys:String x:Key="FbCatLearn">学習機能</sys:String>
+  <sys:String x:Key="FbCatLearnTip">死活 / オンライン / チュートリアル</sys:String>
+  <sys:String x:Key="FbCatInstall">インストール &amp; 起動</sys:String>
+  <sys:String x:Key="FbCatInstallTip">インストーラー / .NET / アンインストール</sys:String>
+  <sys:String x:Key="FbCatOther">その他 / 提案</sys:String>
+  <sys:String x:Key="FbCatOtherTip">機能のアイデア / その他</sys:String>
+  <sys:String x:Key="FbTitleLabel">一行タイトル</sys:String>
+  <sys:String x:Key="FbTitlePlaceholder">例：死活モードでKataGoがタイムアウトし続ける</sys:String>
+  <sys:String x:Key="FbDetailLabel">詳細</sys:String>
+  <sys:String x:Key="FbDetailPlaceholder">再現方法は？ 手順は？ 期待する動作と実際の動作は？</sys:String>
+  <sys:String x:Key="FbEmailLabel">メール</sys:String>
+  <sys:String x:Key="FbSteamLabel">Steam名</sys:String>
+  <sys:String x:Key="FbOptional">（任意）</sys:String>
+  <sys:String x:Key="FbHint">SMTP経由で開発者のメールボックスに送信されます</sys:String>
+  <sys:String x:Key="FbCancel">キャンセル</sys:String>
+  <sys:String x:Key="FbSubmit">📤 フィードバックを送信</sys:String>
+
+  <!-- ===== Styled dialog default buttons ===== -->
+  <sys:String x:Key="DlgClose">閉じる</sys:String>
+  <sys:String x:Key="DlgOk">OK</sys:String>
+  <sys:String x:Key="DlgCancel">キャンセル</sys:String>
+  <sys:String x:Key="DlgConfirm">確認</sys:String>
+
+  <!-- ===== Crash dialog (App.xaml.cs) ===== -->
+  <sys:String x:Key="CrashTitle">予期しないエラー</sys:String>
+  <sys:String x:Key="CrashMsg">アプリがエラーをキャッチし、詳細をデスクトップに保存しました（go-crash-*.txt）。そのまま続行するか、ファイルをスクリーンショット撮影後に再起動してください。</sys:String>
+
+  <sys:String x:Key="ReviewMoveTip">AI の手 {0}: {1}&#10;プレイヤーの勝率 {2}%&#10;勝ち越し {3}</sys:String>
+
+</ResourceDictionary>

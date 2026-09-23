@@ -1,0 +1,10 @@
+﻿<Application x:Class="GoGame.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GoGame">
+             <!-- v1.1.0：不再用 StartupUri 直接开 MainWindow，
+                  改由 App.OnStartup 先弹 LoginWindow，登录成功才进主界面 -->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

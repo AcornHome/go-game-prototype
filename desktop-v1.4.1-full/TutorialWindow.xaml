@@ -1,0 +1,82 @@
+<Window x:Class="GoGame.TutorialWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="围棋入门" Height="720" Width="900"
+        WindowStartupLocation="CenterOwner"
+        Background="#1E2620" FontFamily="Segoe UI, Microsoft YaHei UI">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BrushBg"        Color="#1E2620"/>
+        <SolidColorBrush x:Key="BrushPanel"     Color="#243029"/>
+        <SolidColorBrush x:Key="BrushCard"      Color="#2D3A32"/>
+        <SolidColorBrush x:Key="BrushCardHi"    Color="#354539"/>
+        <SolidColorBrush x:Key="BrushText"      Color="#F0F2EE"/>
+        <SolidColorBrush x:Key="BrushTextDim"   Color="#9CA89F"/>
+        <SolidColorBrush x:Key="BrushAccent"    Color="#E89B3C"/>
+        <SolidColorBrush x:Key="BrushAccentDim" Color="#9A6B2C"/>
+        <SolidColorBrush x:Key="BrushDanger"     Color="#E5715C"/>
+        <SolidColorBrush x:Key="BrushTextMute"   Color="#6B766E"/>
+        <SolidColorBrush x:Key="BrushStar"       Color="#C6863A"/>
+        <SolidColorBrush x:Key="BrushAI"        Color="#5BA0D0"/>
+        <SolidColorBrush x:Key="BrushHuman"     Color="#8FBE6F"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource BrushText}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="LineHeight" Value="22"/>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{StaticResource BrushBg}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="56"/>      <!-- 顶栏 -->
+                <RowDefinition Height="*"/>       <!-- 内容 -->
+            </Grid.RowDefinitions>
+
+            <!-- 顶栏 -->
+            <Border Grid.Row="0" Background="{StaticResource BrushPanel}" BorderBrush="#1A201C" BorderThickness="0,0,0,1">
+                <DockPanel LastChildFill="False" Margin="20,0">
+                    <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border Width="32" Height="32" CornerRadius="8" Background="#34513F" VerticalAlignment="Center">
+                            <TextBlock Text="📖" Foreground="{StaticResource BrushAccent}" FontSize="18"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="围棋入门" Foreground="{StaticResource BrushText}" FontSize="18"
+                                   FontWeight="SemiBold" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="· 从零开始学围棋" Foreground="{StaticResource BrushTextDim}" FontSize="13"
+                                   VerticalAlignment="Center" Margin="6,0,0,0"/>
+                    </StackPanel>
+                    <Button DockPanel.Dock="Right" Content="✕ 关闭" Padding="14,8" FontSize="12"
+                            Background="Transparent" Foreground="{StaticResource BrushTextDim}"
+                            BorderBrush="{StaticResource BrushTextDim}" Click="Close_Click"
+                            VerticalAlignment="Center" Cursor="Hand"/>
+                </DockPanel>
+            </Border>
+
+            <!-- 主区：左侧目录 + 右侧内容 -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- 左侧目录 -->
+                <Border Grid.Column="0" Background="{StaticResource BrushPanel}" BorderBrush="#1A201C" BorderThickness="0,0,1,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel x:Name="NavList" Margin="10,16">
+                            <!-- 目录项由代码动态生成 -->
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <!-- 右侧内容 -->
+                <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="32,24">
+                    <StackPanel x:Name="ContentPanel">
+                        <!-- 内容由代码动态填充 -->
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

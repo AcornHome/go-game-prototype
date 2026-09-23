@@ -1,0 +1,171 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+  <!-- ===== Top bar / window ===== -->
+  <sys:String x:Key="AppTitle">China Go</sys:String>
+  <sys:String x:Key="TopFeedback">📨 피드백</sys:String>
+  <sys:String x:Key="TopAbout">ℹ️ 정보</sys:String>
+  <sys:String x:Key="LangToggle">🌐 언어</sys:String>
+  <sys:String x:Key="TopFeedbackTip">버그 신고 제출</sys:String>
+  <sys:String x:Key="TopAboutTip">저작권 및 오픈소스 크레딧</sys:String>
+  <sys:String x:Key="LangToggleTip">언어 전환</sys:String>
+  <sys:String x:Key="StatusEngine">엔진:</sys:String>
+  <sys:String x:Key="StatusMovePre">수 </sys:String>
+  <sys:String x:Key="StatusMovePost"></sys:String>
+  <sys:String x:Key="StatusColor">플레이:</sys:String>
+
+  <!-- ===== Stone colors ===== -->
+  <sys:String x:Key="ColorBlack">흑</sys:String>
+  <sys:String x:Key="ColorWhite">백</sys:String>
+  <sys:String x:Key="ColorBlackFirst">흑(선수)</sys:String>
+  <sys:String x:Key="ColorWhiteSecond">백(후수)</sys:String>
+
+  <!-- ===== Engine status ===== -->
+  <sys:String x:Key="EngineStarting">엔진: 시작 중</sys:String>
+  <sys:String x:Key="EngineReady">엔진: 준비됨</sys:String>
+  <sys:String x:Key="EngineThinking">엔진: 생각 중</sys:String>
+  <sys:String x:Key="EngineIdle">엔진: 대기</sys:String>
+  <sys:String x:Key="EngineFailed">엔진: 실패</sys:String>
+  <sys:String x:Key="EngineError">엔진: 오류</sys:String>
+  <sys:String x:Key="EngineLoading">엔진: 로딩 중</sys:String>
+
+  <!-- ===== Game setup panel ===== -->
+  <sys:String x:Key="SettingsTitle">⚙ 게임 설정</sys:String>
+  <sys:String x:Key="LabelDifficulty">AI 난이도</sys:String>
+  <sys:String x:Key="LevelBeginner">초보 · 1초/수</sys:String>
+  <sys:String x:Key="LevelEasy">쉬움 · 3초/수 (추천)</sys:String>
+  <sys:String x:Key="LevelMedium">중급 · 10초/수</sys:String>
+  <sys:String x:Key="LevelHard">고급 · 30초/수</sys:String>
+  <sys:String x:Key="LabelBoardSize">바둑판 크기</sys:String>
+  <sys:String x:Key="Size9">9×9 (블리츠)</sys:String>
+  <sys:String x:Key="Size13">13×13</sys:String>
+  <sys:String x:Key="Size19">19×19 (표준)</sys:String>
+  <sys:String x:Key="LabelYourColor">나의 색</sys:String>
+  <sys:String x:Key="ColorBlackOpt">흑(선수)</sys:String>
+  <sys:String x:Key="ColorWhiteOpt">백(후수)</sys:String>
+  <sys:String x:Key="SizeHint">⚠ 바둑판/색 변경은 다음 게임부터 적용됩니다</sys:String>
+
+  <!-- ===== Game actions panel ===== -->
+  <sys:String x:Key="OpsTitle">▶ 게임 동작</sys:String>
+  <sys:String x:Key="NewGame">🎯 새 게임</sys:String>
+  <sys:String x:Key="Hint">💡 힌트 (AI 조언)</sys:String>
+  <sys:String x:Key="HintTip">어디에 둘지 모르시겠나요? KataGo가 최선의 점을 제안합니다 (바둑판에서 #1로 표시)</sys:String>
+  <sys:String x:Key="Undo">↶ 되돌리기 (2수)</sys:String>
+  <sys:String x:Key="Pass">⏭ 패스</sys:String>
+  <sys:String x:Key="Score">📊 점수</sys:String>
+  <sys:String x:Key="Save">💾 SGF 저장</sys:String>
+  <sys:String x:Key="Resign">🏳 기권</sys:String>
+
+  <!-- ===== Timer bar ===== -->
+  <sys:String x:Key="YourTime">⏳ 내 시간</sys:String>
+  <sys:String x:Key="AiThinking">🤖 AI 생각 중</sys:String>
+  <sys:String x:Key="Standby">대기</sys:String>
+
+  <!-- ===== Bottom status bar ===== -->
+  <sys:String x:Key="BlackLabel">흑</sys:String>
+  <sys:String x:Key="WhiteLabel">백</sys:String>
+  <sys:String x:Key="StonesLabel">돌</sys:String>
+  <sys:String x:Key="LastLabel">마지막</sys:String>
+  <sys:String x:Key="MovePre">수 </sys:String>
+  <sys:String x:Key="MovePost"></sys:String>
+  <sys:String x:Key="TurnLabel">차례: </sys:String>
+  <sys:String x:Key="BlackShort">흑</sys:String>
+  <sys:String x:Key="WhiteShort">백</sys:String>
+
+  <!-- ===== Idle status ===== -->
+  <sys:String x:Key="IdleStatus">대기 중 · 시작하려면 "새 게임"을 클릭하세요</sys:String>
+  <sys:String x:Key="IdleHint">오른쪽에서 바둑판 크기 / 난이도 / 색을 조정한 후 새 게임을 시작하세요</sys:String>
+
+  <!-- ===== Endgame overlay ===== -->
+  <sys:String x:Key="EndgameTitle">게임 종료</sys:String>
+  <sys:String x:Key="EndgameBlackYou">흑 (나)</sys:String>
+  <sys:String x:Key="EndgameWhiteYou">백 (나)</sys:String>
+  <sys:String x:Key="EndgameBlackAi">흑 (KataGo)</sys:String>
+  <sys:String x:Key="EndgameWhiteAi">백 (KataGo)</sys:String>
+  <sys:String x:Key="EndgameDraw">무승부</sys:String>
+  <sys:String x:Key="EndgameDetailBlackYou">흑 (나)</sys:String>
+  <sys:String x:Key="EndgameDetailWhiteAi">백 (AI)</sys:String>
+  <sys:String x:Key="EndgameStones">돌</sys:String>
+  <sys:String x:Key="EndgameTerritory">영역</sys:String>
+  <sys:String x:Key="EndgameNewGame">🎯 다시 하기</sys:String>
+  <sys:String x:Key="EndgameReview">📊 AI 복기</sys:String>
+  <sys:String x:Key="EndgameClose">✕ 패널 닫기</sys:String>
+  <sys:String x:Key="EndgameYouWin">승</sys:String>
+  <sys:String x:Key="EndgameAiWin">승</sys:String>
+  <sys:String x:Key="KomiNoteNeutral">KataGo final_score 기준; 중립 점 {0}개는 미할당이므로 공식 점수와 다를 수 있습니다.</sys:String>
+  <sys:String x:Key="KomiNoteDecided">KataGo final_score가 권위 있습니다; 흑은 백에게 7.5 기성(중국 룰 표준 기성)을 줍니다.</sys:String>
+
+  <!-- ===== AI Review window ===== -->
+  <sys:String x:Key="ReviewTitle">📊 AI 복기</sys:String>
+  <sys:String x:Key="ReviewSummary">결과: {0} · KataGo 수 평가 {1}건 · 게임은 {2}수로 종료되었습니다.</sys:String>
+  <sys:String x:Key="ReviewKeyPoints">🔍 주요 전환점</sys:String>
+  <sys:String x:Key="ReviewWinrate">📈 각 KataGo 수 이후 플레이어 승률</sys:String>
+  <sys:String x:Key="ReviewMoves">📋 수별 상세 (KataGo 수에 대한 평가만)</sys:String>
+  <sys:String x:Key="ReviewColIndex">#</sys:String>
+  <sys:String x:Key="ReviewColSide">색</sys:String>
+  <sys:String x:Key="ReviewColVertex">수</sys:String>
+  <sys:String x:Key="ReviewColWinrate">승률%</sys:String>
+  <sys:String x:Key="ReviewColLead">리드</sys:String>
+  <sys:String x:Key="ReviewColDelta">Δ</sys:String>
+  <sys:String x:Key="ReviewColVerdict">판정</sys:String>
+  <sys:String x:Key="ReviewClose">닫기</sys:String>
+  <sys:String x:Key="ReviewVerdictOpening">초반 평가</sys:String>
+  <sys:String x:Key="ReviewVerdictPass">패스 (변화 없음)</sys:String>
+  <sys:String x:Key="ReviewVerdictResign">기권</sys:String>
+  <sys:String x:Key="ReviewVerdictBrilliant">✨ 훌륭한 수</sys:String>
+  <sys:String x:Key="ReviewVerdictGood">좋은 수</sys:String>
+  <sys:String x:Key="ReviewVerdictBigMistake">⚠️ 큰 실수</sys:String>
+  <sys:String x:Key="ReviewVerdictMistake">실수</sys:String>
+  <sys:String x:Key="ReviewVerdictNormal">보통</sys:String>
+  <sys:String x:Key="ReviewPlayerMoveNoEval">플레이어 수 뒤 평가 없음</sys:String>
+  <sys:String x:Key="ReviewNoTurningPoint">승률이 비교적 안정적이었으며 뚜렷한 전환점이 없었습니다.</sys:String>
+  <sys:String x:Key="ReviewMaxImprove">📈 최대 상승: {0}수 (플레이어 {1}), {2}에서 승률 {3}% ({4}%)</sys:String>
+  <sys:String x:Key="ReviewMaxDrop">📉 최대 하락: {0}수 (플레이어 {1}), {2}에서 승률 {3}% ({4}%)</sys:String>
+  <sys:String x:Key="ReviewXAxis">AI 수 # (1 ~ {0})</sys:String>
+  <sys:String x:Key="ReviewYou">나</sys:String>
+  <sys:String x:Key="ReviewAi">AI</sys:String>
+  <sys:String x:Key="ReviewUnrecorded"> (기록 없음)</sys:String>
+
+  <!-- ===== Feedback window ===== -->
+  <sys:String x:Key="FbTitle">피드백 · China Go</sys:String>
+  <sys:String x:Key="FbBannerTitle">피드백</sys:String>
+  <sys:String x:Key="FbBannerSub"> · China Go</sys:String>
+  <sys:String x:Key="FbBannerDesc">문제를 발견하셨나요? 모든 보고서를 읽고 앱을 개선합니다.</sys:String>
+  <sys:String x:Key="FbCatTitle">카테고리</sys:String>
+  <sys:String x:Key="FbCatKataGo">KataGo 오류</sys:String>
+  <sys:String x:Key="FbCatKataGoTip">응답 없음 / 충돌 / 매우 느림</sys:String>
+  <sys:String x:Key="FbCatUi">UI 지연</sys:String>
+  <sys:String x:Key="FbCatUiTip">깜빡임 / 마우스 무반응 / 버튼 무반응</sys:String>
+  <sys:String x:Key="FbCatReview">복기 / SGF</sys:String>
+  <sys:String x:Key="FbCatReviewTip">SGF 로딩 / 리포트 생성 / 수 로그</sys:String>
+  <sys:String x:Key="FbCatLearn">학습 기능</sys:String>
+  <sys:String x:Key="FbCatLearnTip">사활 / 온라인 / 튜토리얼</sys:String>
+  <sys:String x:Key="FbCatInstall">설치 및 실행</sys:String>
+  <sys:String x:Key="FbCatInstallTip">인스톨러 / .NET / 제거</sys:String>
+  <sys:String x:Key="FbCatOther">기타 / 제안</sys:String>
+  <sys:String x:Key="FbCatOtherTip">기능 아이디어 / 기타</sys:String>
+  <sys:String x:Key="FbTitleLabel">한 줄 제목</sys:String>
+  <sys:String x:Key="FbTitlePlaceholder">예: 생사 모드에서 KataGo가 계속 타임아웃됨</sys:String>
+  <sys:String x:Key="FbDetailLabel">설명</sys:String>
+  <sys:String x:Key="FbDetailPlaceholder">재현 방법? 단계? 예상 vs 실제?</sys:String>
+  <sys:String x:Key="FbEmailLabel">이메일</sys:String>
+  <sys:String x:Key="FbSteamLabel">Steam 이름</sys:String>
+  <sys:String x:Key="FbOptional"> (선택 사항)</sys:String>
+  <sys:String x:Key="FbHint">SMTP를 통해 개발자 메일함으로 제출됩니다</sys:String>
+  <sys:String x:Key="FbCancel">취소</sys:String>
+  <sys:String x:Key="FbSubmit">📤 피드백 제출</sys:String>
+
+  <!-- ===== Styled dialog default buttons ===== -->
+  <sys:String x:Key="DlgClose">닫기</sys:String>
+  <sys:String x:Key="DlgOk">확인</sys:String>
+  <sys:String x:Key="DlgCancel">취소</sys:String>
+  <sys:String x:Key="DlgConfirm">확인</sys:String>
+
+  <!-- ===== Crash dialog (App.xaml.cs) ===== -->
+  <sys:String x:Key="CrashTitle">예기치 않은 오류</sys:String>
+  <sys:String x:Key="CrashMsg">앱이 오류를 잡아 데스크톱에 상세 내용을 저장했습니다 (go-crash-*.txt). 계속 플레이하거나 파일을 스크린샷 찍은 후 재시작할 수 있습니다.</sys:String>
+
+  <sys:String x:Key="ReviewMoveTip">AI 수 {0}: {1}&#10;플레이어 승률 {2}%&#10;리드 {3}</sys:String>
+
+</ResourceDictionary>

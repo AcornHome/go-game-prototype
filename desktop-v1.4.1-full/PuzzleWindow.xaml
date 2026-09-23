@@ -1,0 +1,209 @@
+<Window x:Class="GoGame.PuzzleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="互动死活题" Height="760" Width="1080"
+        WindowStartupLocation="CenterOwner"
+        Background="#1E2620" FontFamily="Segoe UI, Microsoft YaHei UI">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BrushBg"        Color="#1E2620"/>
+        <SolidColorBrush x:Key="BrushPanel"     Color="#243029"/>
+        <SolidColorBrush x:Key="BrushCard"      Color="#2D3A32"/>
+        <SolidColorBrush x:Key="BrushCardHi"    Color="#354539"/>
+        <SolidColorBrush x:Key="BrushText"      Color="#F0F2EE"/>
+        <SolidColorBrush x:Key="BrushTextDim"   Color="#9CA89F"/>
+        <SolidColorBrush x:Key="BrushAccent"    Color="#E89B3C"/>
+        <SolidColorBrush x:Key="BrushAccentDim" Color="#9A6B2C"/>
+        <SolidColorBrush x:Key="BrushDanger"     Color="#E5715C"/>
+        <SolidColorBrush x:Key="BrushTextMute"   Color="#6B766E"/>
+        <SolidColorBrush x:Key="BrushSuccess"    Color="#7BD389"/>
+        <SolidColorBrush x:Key="BrushStar"       Color="#C6863A"/>
+        <SolidColorBrush x:Key="BrushAI"        Color="#5BA0D0"/>
+        <SolidColorBrush x:Key="BrushHuman"     Color="#8FBE6F"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource BrushText}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="LineHeight" Value="22"/>
+        </Style>
+
+        <Style x:Key="BtnBase" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource BrushText}"/>
+            <Setter Property="Background" Value="{StaticResource BrushCard}"/>
+            <Setter Property="BorderBrush" Value="#3D4A40"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="14,8"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource BrushCardHi}"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource BrushAccent}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.4"/>
+                                <Setter Property="Cursor" Value="Arrow"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BtnPrimary" TargetType="Button" BasedOn="{StaticResource BtnBase}">
+            <Setter Property="Background" Value="{StaticResource BrushAccent}"/>
+            <Setter Property="Foreground" Value="#1E2620"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BrushAccent}"/>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{StaticResource BrushBg}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="56"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 顶栏 -->
+            <Border Grid.Row="0" Background="{StaticResource BrushPanel}" BorderBrush="#1A201C" BorderThickness="0,0,0,1">
+                <DockPanel LastChildFill="False" Margin="20,0">
+                    <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border Width="32" Height="32" CornerRadius="8" Background="#34513F" VerticalAlignment="Center">
+                            <TextBlock Text="🧩" Foreground="{StaticResource BrushAccent}" FontSize="18"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="互动死活题" Foreground="{StaticResource BrushText}" FontSize="18"
+                                   FontWeight="SemiBold" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="· KataGo 实时评判" Foreground="{StaticResource BrushTextDim}" FontSize="13"
+                                   VerticalAlignment="Center" Margin="6,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock x:Name="StatusText" Text="点击题目开始" Foreground="{StaticResource BrushTextDim}"
+                                   FontSize="12" VerticalAlignment="Center" Margin="0,0,14,0"/>
+                        <Button Content="✕ 关闭" Padding="14,8" FontSize="12"
+                                Background="Transparent" Foreground="{StaticResource BrushTextDim}"
+                                BorderBrush="{StaticResource BrushTextDim}" Click="Close_Click"
+                                VerticalAlignment="Center" Cursor="Hand"/>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- 主区：左侧题库 + 中部棋盘 + 右侧说明 -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="240"/>     <!-- 题库列表 -->
+                    <ColumnDefinition Width="*"/>       <!-- 棋盘 + 操作 -->
+                    <ColumnDefinition Width="280"/>     <!-- 说明 + KataGo 反馈 -->
+                </Grid.ColumnDefinitions>
+
+                <!-- 左侧题库 -->
+                <Border Grid.Column="0" Background="{StaticResource BrushPanel}" BorderBrush="#1A201C" BorderThickness="0,0,1,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel x:Name="PuzzleList" Margin="10,16">
+                            <!-- 由代码动态生成 -->
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <!-- 中部棋盘 + 操作 -->
+                <Grid Grid.Column="1" Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- 棋盘（Viewbox 让它随窗口缩放） -->
+                    <Border Grid.Row="0" Background="{StaticResource BrushCard}" CornerRadius="8" Padding="12">
+                        <Viewbox Stretch="Uniform">
+                            <go:BoardControl x:Name="BoardView" Width="640" Height="640"
+                                             xmlns:go="clr-namespace:GoGame"/>
+                        </Viewbox>
+                    </Border>
+
+                    <!-- 操作按钮 -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,0">
+                        <Button x:Name="ResetBtn" Style="{StaticResource BtnBase}" Content="🔄 重置局面" Margin="0,0,8,0"
+                                Padding="14,8" FontSize="13" Click="Reset_Click"/>
+                        <Button x:Name="HintBtn" Style="{StaticResource BtnBase}" Content="💡 显示提示" Margin="0,0,8,0"
+                                Padding="14,8" FontSize="13" Click="Hint_Click"/>
+                        <Button x:Name="SolutionBtn" Style="{StaticResource BtnBase}" Content="📖 查看正解" Margin="0,0,8,0"
+                                Padding="14,8" FontSize="13" Click="Solution_Click"/>
+                        <Button x:Name="JudgeBtn" Style="{StaticResource BtnPrimary}" Content="🤖 让 KataGo 评判"
+                                Padding="14,8" FontSize="13" Click="Judge_Click"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- 右侧说明 -->
+                <Border Grid.Column="2" Background="{StaticResource BrushPanel}" BorderBrush="#1A201C" BorderThickness="1,0,0,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="20,16">
+                        <StackPanel>
+                            <TextBlock x:Name="TitleText" Text="选一道题开始"
+                                       Foreground="{StaticResource BrushAccent}" FontSize="18" FontWeight="SemiBold"/>
+                            <TextBlock x:Name="CategoryText" Text=""
+                                       Foreground="{StaticResource BrushTextDim}" FontSize="12" Margin="0,4,0,12"/>
+
+                            <Border Background="{StaticResource BrushCard}" CornerRadius="6" Padding="14,12">
+                                <StackPanel>
+                                    <TextBlock Text="目标" Foreground="{StaticResource BrushTextDim}" FontSize="11" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="GoalText" Text="" FontSize="13" LineHeight="20"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{StaticResource BrushCard}" CornerRadius="6" Padding="14,12" Margin="0,8,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="执子" Foreground="{StaticResource BrushTextDim}" FontSize="11" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="ColorText" Text="" FontSize="13"/>
+                                </StackPanel>
+                            </Border>
+
+                            <TextBlock x:Name="HintTextBlock" Text=""
+                                       Foreground="{StaticResource BrushAccent}" FontSize="13"
+                                       Margin="0,12,0,0" TextWrapping="Wrap"
+                                       Visibility="Collapsed"/>
+
+                            <!-- KataGo 评判结果区 -->
+                            <Border x:Name="ResultPanel" Background="{StaticResource BrushCard}" CornerRadius="6"
+                                    Padding="14,12" Margin="0,16,0,0" Visibility="Collapsed">
+                                <StackPanel>
+                                    <TextBlock Text="KataGo 评判" Foreground="{StaticResource BrushTextDim}" FontSize="11" Margin="0,0,0,6"/>
+                                    <TextBlock x:Name="VerdictText" Text="" FontSize="15" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="VerdictDetailText" Text="" Foreground="{StaticResource BrushTextDim}"
+                                               FontSize="12" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                                    <TextBlock x:Name="VerdictMovesText" Text="" Foreground="{StaticResource BrushTextMute}"
+                                               FontSize="11" Margin="0,8,0,0" TextWrapping="Wrap" FontFamily="Consolas, Microsoft YaHei UI"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{StaticResource BrushCard}" CornerRadius="6" Padding="14,12" Margin="0,12,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="评判规则" Foreground="{StaticResource BrushTextDim}" FontSize="11" Margin="0,0,0,6"/>
+                                    <TextBlock FontSize="12" LineHeight="20">
+                                        <Run Text="KataGo 会反向续走双方最佳应对，" Foreground="{StaticResource BrushText}"/>
+                                        <Run Text="然后用 final_score 数子判定生死。" Foreground="{StaticResource BrushText}"/>
+                                        <LineBreak/>
+                                        <LineBreak/>
+                                        <Run Text="活棋题 →" Foreground="{StaticResource BrushText}"/>
+                                        <Run Text="执子方净胜 &gt; 0" Foreground="{StaticResource BrushSuccess}" FontWeight="SemiBold"/>
+                                        <Run Text=" 且目数 = 围空 + 子" Foreground="{StaticResource BrushText}"/>
+                                        <LineBreak/>
+                                        <Run Text="杀棋题 →" Foreground="{StaticResource BrushText}"/>
+                                        <Run Text="执子方净胜 &gt; 0" Foreground="{StaticResource BrushSuccess}" FontWeight="SemiBold"/>
+                                        <Run Text=" 即杀成功" Foreground="{StaticResource BrushText}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

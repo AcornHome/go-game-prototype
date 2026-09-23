@@ -1,0 +1,9 @@
+﻿<Application x:Class="GoGame.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GoGame">
+             <!-- v1.5.0：App.OnStartup 直接 new MainWindow 并注入本机匿名身份，无登录门禁 -->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

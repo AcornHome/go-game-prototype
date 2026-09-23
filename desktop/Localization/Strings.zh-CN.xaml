@@ -1,0 +1,171 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+  <!-- ===== 顶栏 / 窗口 ===== -->
+  <sys:String x:Key="AppTitle">中国围棋</sys:String>
+  <sys:String x:Key="TopFeedback">📨 反馈</sys:String>
+  <sys:String x:Key="TopAbout">ℹ️ 关于</sys:String>
+  <sys:String x:Key="LangToggle">🌐 语言</sys:String>
+  <sys:String x:Key="TopFeedbackTip">提交问题反馈</sys:String>
+  <sys:String x:Key="TopAboutTip">版权信息与开源致谢</sys:String>
+  <sys:String x:Key="LangToggleTip">切换语言</sys:String>
+  <sys:String x:Key="StatusEngine">引擎:</sys:String>
+  <sys:String x:Key="StatusMovePre">第</sys:String>
+  <sys:String x:Key="StatusMovePost">手</sys:String>
+  <sys:String x:Key="StatusColor">执子:</sys:String>
+
+  <!-- ===== 执子色 ===== -->
+  <sys:String x:Key="ColorBlack">黑棋</sys:String>
+  <sys:String x:Key="ColorWhite">白棋</sys:String>
+  <sys:String x:Key="ColorBlackFirst">黑棋 (先手)</sys:String>
+  <sys:String x:Key="ColorWhiteSecond">白棋 (后手)</sys:String>
+
+  <!-- ===== 引擎状态 ===== -->
+  <sys:String x:Key="EngineStarting">引擎: 启动中</sys:String>
+  <sys:String x:Key="EngineReady">引擎: 就绪</sys:String>
+  <sys:String x:Key="EngineThinking">引擎: 思考中</sys:String>
+  <sys:String x:Key="EngineIdle">引擎: 待启动</sys:String>
+  <sys:String x:Key="EngineFailed">引擎: 失败</sys:String>
+  <sys:String x:Key="EngineError">引擎: 异常</sys:String>
+  <sys:String x:Key="EngineLoading">引擎: 加载中</sys:String>
+
+  <!-- ===== 对局设置面板 ===== -->
+  <sys:String x:Key="SettingsTitle">⚙ 对局设置</sys:String>
+  <sys:String x:Key="LabelDifficulty">AI 难度</sys:String>
+  <sys:String x:Key="LevelBeginner">入门 · 1 秒/手</sys:String>
+  <sys:String x:Key="LevelEasy">初级 · 3 秒/手（推荐）</sys:String>
+  <sys:String x:Key="LevelMedium">中级 · 10 秒/手</sys:String>
+  <sys:String x:Key="LevelHard">高级 · 30 秒/手</sys:String>
+  <sys:String x:Key="LabelBoardSize">棋盘大小</sys:String>
+  <sys:String x:Key="Size9">9 路 (快棋)</sys:String>
+  <sys:String x:Key="Size13">13 路</sys:String>
+  <sys:String x:Key="Size19">19 路 (标准)</sys:String>
+  <sys:String x:Key="LabelYourColor">你的执子</sys:String>
+  <sys:String x:Key="ColorBlackOpt">黑棋 (先手)</sys:String>
+  <sys:String x:Key="ColorWhiteOpt">白棋 (后手)</sys:String>
+  <sys:String x:Key="SizeHint">⚠ 路数/执子更改将在「新对局」时生效</sys:String>
+
+  <!-- ===== 对局操作面板 ===== -->
+  <sys:String x:Key="OpsTitle">▶ 对局操作</sys:String>
+  <sys:String x:Key="NewGame">🎯 开始新对局</sys:String>
+  <sys:String x:Key="Hint">💡 提示（AI 建议）</sys:String>
+  <sys:String x:Key="HintTip">不知道下一步怎么下？让 KataGo 替你算：棋盘上会标出推荐点（1 号最推荐）</sys:String>
+  <sys:String x:Key="Undo">↶ 悔棋（撤两步）</sys:String>
+  <sys:String x:Key="Pass">⏭ 虚手 (Pass)</sys:String>
+  <sys:String x:Key="Score">📊 终局数子</sys:String>
+  <sys:String x:Key="Save">💾 保存棋谱 (SGF)</sys:String>
+  <sys:String x:Key="Resign">🏳 认输</sys:String>
+
+  <!-- ===== 计时条 ===== -->
+  <sys:String x:Key="YourTime">⏳ 你的时间</sys:String>
+  <sys:String x:Key="AiThinking">🤖 AI 思考中</sys:String>
+  <sys:String x:Key="Standby">待机</sys:String>
+
+  <!-- ===== 底栏 ===== -->
+  <sys:String x:Key="BlackLabel">黑棋</sys:String>
+  <sys:String x:Key="WhiteLabel">白棋</sys:String>
+  <sys:String x:Key="StonesLabel">子数</sys:String>
+  <sys:String x:Key="LastLabel">最近</sys:String>
+  <sys:String x:Key="MovePre">第 </sys:String>
+  <sys:String x:Key="MovePost"> 手</sys:String>
+  <sys:String x:Key="TurnLabel">执子: </sys:String>
+  <sys:String x:Key="BlackShort">黑</sys:String>
+  <sys:String x:Key="WhiteShort">白</sys:String>
+
+  <!-- ===== 闲置状态 ===== -->
+  <sys:String x:Key="IdleStatus">闲置中 · 点「开始新对局」开始</sys:String>
+  <sys:String x:Key="IdleHint">右侧调整棋盘大小 / 难度 / 执子后开始新对局</sys:String>
+
+  <!-- ===== 终局覆盖层 ===== -->
+  <sys:String x:Key="EndgameTitle">对局结束</sys:String>
+  <sys:String x:Key="EndgameBlackYou">黑棋（你）胜</sys:String>
+  <sys:String x:Key="EndgameWhiteYou">白棋（你）胜</sys:String>
+  <sys:String x:Key="EndgameBlackAi">黑棋（KataGo）胜</sys:String>
+  <sys:String x:Key="EndgameWhiteAi">白棋（KataGo）胜</sys:String>
+  <sys:String x:Key="EndgameDraw">和棋</sys:String>
+  <sys:String x:Key="EndgameDetailBlackYou">黑棋（你）</sys:String>
+  <sys:String x:Key="EndgameDetailWhiteAi">白棋（AI）</sys:String>
+  <sys:String x:Key="EndgameStones">棋子</sys:String>
+  <sys:String x:Key="EndgameTerritory">围空</sys:String>
+  <sys:String x:Key="EndgameNewGame">🎯 再来一局</sys:String>
+  <sys:String x:Key="EndgameReview">📊 AI 复盘</sys:String>
+  <sys:String x:Key="EndgameClose">✕ 关闭面板</sys:String>
+  <sys:String x:Key="EndgameYouWin">胜</sys:String>
+  <sys:String x:Key="EndgameAiWin">胜</sys:String>
+  <sys:String x:Key="KomiNoteNeutral">以 KataGo final_score 为准；剩余 {0} 个空点未明确归属，简化估算与权威评分可能不同。</sys:String>
+  <sys:String x:Key="KomiNoteDecided">以 KataGo final_score 为准；黑贴白 7.5（中国规则标准贴目）。</sys:String>
+
+  <!-- ===== AI 复盘窗口 ===== -->
+  <sys:String x:Key="ReviewTitle">📊 AI 复盘报告</sys:String>
+  <sys:String x:Key="ReviewSummary">结果：{0} · 共 {1} 次 KataGo 走子评估 · 棋盘 {2} 步完成。</sys:String>
+  <sys:String x:Key="ReviewKeyPoints">🔍 关键转折点</sys:String>
+  <sys:String x:Key="ReviewWinrate">📈 KataGo 每步走子后的玩家视角胜率</sys:String>
+  <sys:String x:Key="ReviewMoves">📋 每手棋明细（仅 KataGo 走子有评估）</sys:String>
+  <sys:String x:Key="ReviewColIndex">步数</sys:String>
+  <sys:String x:Key="ReviewColSide">执子</sys:String>
+  <sys:String x:Key="ReviewColVertex">落子</sys:String>
+  <sys:String x:Key="ReviewColWinrate">胜率</sys:String>
+  <sys:String x:Key="ReviewColLead">目差</sys:String>
+  <sys:String x:Key="ReviewColDelta">变化</sys:String>
+  <sys:String x:Key="ReviewColVerdict">评价</sys:String>
+  <sys:String x:Key="ReviewClose">关闭</sys:String>
+  <sys:String x:Key="ReviewVerdictOpening">开局评估</sys:String>
+  <sys:String x:Key="ReviewVerdictPass">虚手（局面不变）</sys:String>
+  <sys:String x:Key="ReviewVerdictResign">认输</sys:String>
+  <sys:String x:Key="ReviewVerdictBrilliant">✨ 妙招</sys:String>
+  <sys:String x:Key="ReviewVerdictGood">好棋</sys:String>
+  <sys:String x:Key="ReviewVerdictBigMistake">⚠️ 大失误</sys:String>
+  <sys:String x:Key="ReviewVerdictMistake">坏手</sys:String>
+  <sys:String x:Key="ReviewVerdictNormal">常规</sys:String>
+  <sys:String x:Key="ReviewPlayerMoveNoEval">玩家落子后未评估</sys:String>
+  <sys:String x:Key="ReviewNoTurningPoint">本局胜率波动不大，没有特别显著的转折点。</sys:String>
+  <sys:String x:Key="ReviewMaxImprove">📈 最大改善：第 {0} 手 {1} 下 {2}，局面胜率 {3}%（{4}%）</sys:String>
+  <sys:String x:Key="ReviewMaxDrop">📉 最大滑坡：第 {0} 手 {1} 下 {2}，局面胜率 {3}%（{4}%）</sys:String>
+  <sys:String x:Key="ReviewXAxis">AI 走子序号（1 ~ {0}）</sys:String>
+  <sys:String x:Key="ReviewYou">你</sys:String>
+  <sys:String x:Key="ReviewAi">AI</sys:String>
+  <sys:String x:Key="ReviewUnrecorded">(未记录)</sys:String>
+
+  <!-- ===== 反馈窗口 ===== -->
+  <sys:String x:Key="FbTitle">问题反馈 · 中国围棋</sys:String>
+  <sys:String x:Key="FbBannerTitle">问题反馈</sys:String>
+  <sys:String x:Key="FbBannerSub"> · 中国围棋</sys:String>
+  <sys:String x:Key="FbBannerDesc">发现什么问题？我们逐条查看，让程序越用越顺手。</sys:String>
+  <sys:String x:Key="FbCatTitle">问题类型</sys:String>
+  <sys:String x:Key="FbCatKataGo">KataGo 异常</sys:String>
+  <sys:String x:Key="FbCatKataGoTip">不响应 / 报错 / 走子很慢</sys:String>
+  <sys:String x:Key="FbCatUi">界面卡顿</sys:String>
+  <sys:String x:Key="FbCatUiTip">闪烁 / 鼠标失灵 / 按钮没反应</sys:String>
+  <sys:String x:Key="FbCatReview">复盘 / SGF</sys:String>
+  <sys:String x:Key="FbCatReviewTip">SGF 加载 / 报告生成 / 走子记录</sys:String>
+  <sys:String x:Key="FbCatLearn">教学功能</sys:String>
+  <sys:String x:Key="FbCatLearnTip">死活题 / 联机 / 围棋教程</sys:String>
+  <sys:String x:Key="FbCatInstall">安装与启动</sys:String>
+  <sys:String x:Key="FbCatInstallTip">安装包 / .NET / 卸载</sys:String>
+  <sys:String x:Key="FbCatOther">其他 / 建议</sys:String>
+  <sys:String x:Key="FbCatOtherTip">功能建议 / 想法 / 用其他</sys:String>
+  <sys:String x:Key="FbTitleLabel">一句话标题</sys:String>
+  <sys:String x:Key="FbTitlePlaceholder">例：死活题模式 KataGo 一直报 timeout</sys:String>
+  <sys:String x:Key="FbDetailLabel">详细描述</sys:String>
+  <sys:String x:Key="FbDetailPlaceholder">怎么触发的？复现步骤？期望什么样？实际什么样？</sys:String>
+  <sys:String x:Key="FbEmailLabel">邮箱</sys:String>
+  <sys:String x:Key="FbSteamLabel">Steam 主名</sys:String>
+  <sys:String x:Key="FbOptional">（选填）</sys:String>
+  <sys:String x:Key="FbHint">提交后通过 QQ 邮箱 SMTP 直接发送到开发者邮箱</sys:String>
+  <sys:String x:Key="FbCancel">取消</sys:String>
+  <sys:String x:Key="FbSubmit">📤 提交反馈</sys:String>
+
+  <!-- ===== 弹窗默认按钮 ===== -->
+  <sys:String x:Key="DlgClose">关闭</sys:String>
+  <sys:String x:Key="DlgOk">好</sys:String>
+  <sys:String x:Key="DlgCancel">取消</sys:String>
+  <sys:String x:Key="DlgConfirm">确认</sys:String>
+
+  <!-- ===== 崩溃弹窗 (App.xaml.cs) ===== -->
+  <sys:String x:Key="CrashTitle">发生未预期错误</sys:String>
+  <sys:String x:Key="CrashMsg">应用拦截到一个错误，已把详细信息保存到桌面 go-crash-*.txt：可以继续操作，也建议截图上述文件后重启应用。</sys:String>
+
+  <sys:String x:Key="ReviewMoveTip">AI 第 {0} 手：{1}&#10;玩家胜率 {2}%&#10;目差 {3}</sys:String>
+
+</ResourceDictionary>
