@@ -18,6 +18,7 @@ permissions:
 jobs:
   push:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - name: Resolve release tag
         id: meta
@@ -33,7 +34,24 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
-        run: gh release download "${{ steps.meta.outputs.tag }}" --pattern "ChinaGo-*-win.zip" --dir ./download
+        run: |
+          mkdir -p download
+          TAG="${{ steps.meta.outputs.tag }}"
+          ASSET_API=$(curl -sSL --retry 5 --retry-delay 5 \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG" \
+            | jq -r '[.assets[] | select(.name | test("^ChinaGo-.*-win\\.zip$"))][0].url')
+          if [ -z "$ASSET_API" ] || [ "$ASSET_API" = "null" ]; then
+            echo "::error::No ChinaGo-*-win.zip asset found on release $TAG"
+            exit 1
+          fi
+          echo "Downloading asset from release $TAG ..."
+          curl -L --retry 5 --retry-delay 10 --retry-all-errors \
+            -o download/ChinaGo-win.zip \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/octet-stream" \
+            "$ASSET_API"
+          ls -la download/
 
       - name: Install butler (Linux build, runs on the overseas runner)
         shell: bash
@@ -49,5 +67,5 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          unzip -o ./download/ChinaGo-*-win.zip -d dist
+          unzip -o ./download/ChinaGo-win.zip -d dist
           ./butler push ./dist "${{ secrets.ITCH_USER }}/chinago:windows-stable" --user "${{ secrets.ITCH_USER }}"
