@@ -10,7 +10,9 @@ if not exist "%SRC%" (
   exit /b 1
 )
 if exist "%OUT%" del "%OUT%"
-powershell -NoProfile -Command "Compress-Archive -Path '%SRC%\*' -DestinationPath '%OUT%' -Force"
+rem tar.exe (built into Win10/11) makes proper zips with forward-slash paths;
+rem Compress-Archive writes backslash paths that break Linux unzip.
+tar -a -c -f "%OUT%" -C "%SRC%" .
 if not exist "%OUT%" (
   echo [ERROR] zip failed
   pause

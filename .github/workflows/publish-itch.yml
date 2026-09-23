@@ -67,5 +67,19 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          unzip -o ./download/ChinaGo-win.zip -d dist
+          # PowerShell Compress-Archive writes entry names with backslashes;
+          # on Linux unzip extracts them as literal files containing "\" and
+          # exits non-zero on those warnings. Repair the layout after extract.
+          unzip -o ./download/ChinaGo-win.zip -d dist || true
+          find dist -name '*\*' -type f | while IFS= read -r f; do
+            rel="${f#dist/}"
+            new="dist/${rel//\\//}"
+            mkdir -p "$(dirname "$new")"
+            mv -f "$f" "$new"
+          done
+          if [ ! -f dist/GoGame.exe ]; then
+            echo "::error::dist/GoGame.exe missing after extract - zip layout broken"
+            ls -la dist | head -50
+            exit 1
+          fi
           ./butler push ./dist "${{ secrets.ITCH_USER }}/chinago:windows-stable" --user "${{ secrets.ITCH_USER }}"
